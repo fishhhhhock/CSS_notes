@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 指定表格中偶数行填色:nth-child(2n)  :nth-child(2n-1) */
+        tr:nth-child(even){
+            background-color: #96FED1;
+        }
+        /* 奇数行填色 :nth-child(n+1)  :nth-child(2n-1)*/
+        tr:nth-child(odd){
+            background-color: pink;
+        }
+        table{
+            /* 边框合并 */
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table border="1px" width="80%">
+        <th>姓名</th>
+        <th>编号</th>
+        <th>性别</th>
+        <tr>
+            <td>刘海送</td>
+            <td>006</td>
+            <td>男</td>
+        </tr>
+        <tr>
+            <td>汪凤</td>
+            <td>008</td>
+            <td>女</td>
+        </tr>
+        <tr>
+            <td>丁慧</td>
+            <td>012</td>
+            <td>女</td>
+        </tr>
+    </table>
+</body>
+</html>

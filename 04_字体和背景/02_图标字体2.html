@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontAwesome/css/all.css">
+    <style>
+        .poem {
+            width: 200px;
+            height: 300px;
+            margin: auto;
+        }
+    
+        li {
+            list-style: none;
+            margin-left: -40px;
+        }
+    
+/* 
+        通过伪元素设置:
+
+        1. 找到要设置图标的元素通过::before或::after选中
+        2. 在content中设置字体的编码
+        3. 设置字体的样式 
+        ○ fab：font-family: 'Font Awesome 5 Brands';
+        ○ fas：font-family: 'Font Awesome 5 Free'; font-weight：900;
+
+
+*/
+
+        li::before {
+            content: '\f130';
+            /* font-family: 'Font Awesome 5 Brands'; */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            margin-right: 10px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="poem">
+        <h1>武陵春·春晚</h1>
+        <p> [宋] 李清照</p>
+        <ul>
+            <li>风住尘香花已尽，</li>
+            <li>日晚倦梳头。</li>
+            <li>物是人非事事休，</li>
+            <li>欲语泪先流。</li>
+            <li>闻说双溪春尚好，</li>
+            <li>也拟泛轻舟。</li>
+            <li>只恐双溪舴艋舟，</li>
+            <li>载不动、许多愁。</li>
+        </ul>
+    </div>
+    <!-- 
+        通过实体设置
+
+        通过实体来使用图标字体：&#x图标编码;
+    -->
+    <i class="fas">&#xf025;</i>
+</body>
+</html>

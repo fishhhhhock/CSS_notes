@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: green;
+            overflow: hidden; /*使用overflow创建了一个新的BFC*/
+        }
+
+        .container div{
+            float: left;
+            background-color: lightgreen;
+            margin: 10px;
+        }
+
+        .one{
+            width: 200px;
+            height: 200px;
+            /* display: flex; */
+            background-color: hotpink;
+            /* justify-content: center; */
+            /* align-content: center; */
+        }
+
+        .father{
+            display: flex;
+            /* justify-content: center; */
+            justify-content: center;
+        }
+        .two{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>Sibling</div>
+        <div>Sibling</div>
+    </div>
+
+    <!-- 要将容器设置为弹性盒子，然后里面的子元素才会按照设置的属性排列 -->
+    <div class="father">
+        <div class="one"></div>
+        <div class="two"></div>
+    </div>
+</body>
+</html>

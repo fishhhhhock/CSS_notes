@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电影名片</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <style>
+        .film-card{
+            width: 240px;
+            margin: 100px auto;
+            /* 设置阴影 */
+            box-shadow: 0 0 10px rgba(0,0,0,.3);
+        }
+        /* 设置图片大小 */
+        .picture img{
+            width: 100%;
+            /* 补充内容：让图片top/bottom对齐，这样可以使空白消失 */
+            vertical-align: bottom;
+        }
+        /* 重新看视频补充的疏漏 (设置边界后发现图片是基于基线对齐，边框四周有空白，可以设置一下*/
+        /* .picture{ */
+            /* border: 1px red solid; */
+        /* } */
+        /* 补充：整个内容区有一个18像素的间隔 */
+        .info{
+            margin: 0 18px;
+            color: #acacac;
+            font-size: 14px;
+        }
+        .info .title{
+            font-size: 18px;
+            margin: 13px 0  15px 0;
+            /* padding: 0 18px; */
+            color: #717171;
+        }
+        /* .info .category{ */
+            /* color: #acaaaa; */
+            /* margin: 13px 15px; */
+            /* font-size: 14px; */
+        /* } */
+        /* 补充图标与字体之间的间隔 */
+        .info .category i{
+            margin-left: 4px;
+            margin-right: 7px;
+        }
+        .description{
+            /* 因为和前面的category一样的设置，所以可以放到父元素统一设置 */
+            /* margin: 4px 18px; */
+            /* font-size: 14px; */
+            /* 将描述和category排在一起 */
+            margin-left: 4px;
+            margin-top: 18px;
+            margin-bottom: 18px;
+            margin: 18px 4px 18px 0;
+            line-height: 20px;
+        }
+        .line{
+            line-height: 46px;
+            border: 1px #e9e9e9 solid;
+        }
+        .star{
+            margin: 0 16px;
+            float: left;
+        }
+        .weibo{
+            float: right;
+        }
+        .star-wrapper{
+            height: 46px;
+            line-height: 46px;
+            border-top: 1px solid #e9e9e9;
+            color:#ddd;
+            margin: 0 16px;
+        }
+        .star .light{
+            color: #b9cb41;
+        }
+    </style>
+</head>
+<body>
+    <!-- 整体容器 -->
+    <div class="film-card">
+        <!-- 内部容器 -->
+        <div class="info-wrapper">
+            <!-- 图片容器 -->
+            <div class="picture">
+                <!-- 设置图片 -->
+                <img src="./img/film.png" alt="">
+            </div>
+            <!-- 创建内容区容器 -->
+            <div class="info">
+                <h2 class="title">动画电影</h2>
+                <h3 class="category">
+                    <i class="fas fa-map-marker"></i>
+                    动画
+                </h3>
+    
+                <p class="description">这是一部好莱坞电影，非常好看，推荐大家去看~</p>
+            </div>
+                <!-- 创建评分容器 -->
+                <div class="star-wrapper">
+                    <!-- 这里不用多余设置一个line，可以直接设置starwrapper的外边距 -->
+                    <!-- <div class="line"></div> -->
+                    <ul class="star">
+                        <li class="fas fa-star light"></li>
+                        <li class="fas fa-star light"></li>
+                        <li class="fas fa-star"></li>
+                        <li class="fas fa-star"></li>
+                    </ul>
+                <!-- 创建图案 -->
+                    <ul class="weibo">
+                        <li class="fab fa-weibo"></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>

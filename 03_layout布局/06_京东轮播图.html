@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../训练/CSS/reset.css">
+    <style>
+        /* 设置图片容器 */
+        .img-list{
+            width: 500px;
+            height: 470px;
+            margin: 100px auto;
+
+            /* 为u1开启相对定位，目的是使u1的pointer可以相对于u1定位而不是相对于初始包含块 - html定位 */
+            position: relative;
+        }
+        /* 要让所有图片摞在一起，所以要让图片脱离文档流 */
+        .img-list li{
+            position:absolute
+        }
+        /* 通过修改元素的层级来显示指定的图片 */
+        .img-list li:nth-child(1){
+            z-index: 1;
+        }
+
+        /*设置导航点样式  */
+        /* 但由于是行内元素，所以无法出现，所以要设置浮动和层级 */
+        .pointer{
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+            bottom: 20px;
+            z-index: 9999;
+            
+        }
+
+        .pointer a{
+            float: left;
+            /* 已经脱离文档流    display: block; */
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #FFFFFF66;
+            margin: 0px 2px 0px 5px;
+            /* 将背景颜色值设置到内容区，边框和内边距不再有背景颜色 */
+            background-clip: content-box;
+            border: 2px solid rgba(255,255,255,.3); 
+        }
+
+        .pointer a.active,
+        .pointer a:hover{
+            background-color: #fff;
+            border: 2px solid rgba(255,255,255,.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul class="img-list">
+            <li><a href="#"><img src="./img/2q.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./img/3q.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./img/q.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./img/q1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="./img/q3.jpg" alt=""></a></li>
+<!-- 导航点 -->
+            <div class="pointer">
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+                <a href="javascript:;"></a>
+            </div>
+        </ul>
+
+
+
+
+
+
+
+
+<!--  -->
+    </div>
+</body>
+</html>

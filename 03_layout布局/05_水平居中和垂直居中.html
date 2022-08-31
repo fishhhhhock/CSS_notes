@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+            ● 水平布局等式：left + margin-left + border-left + padding-left + width + padding-right + border-right + margin-right + right = 其父元素的宽度
+            ● 垂直布局等式：top + margin-top + border-top + padding-top + height + padding-bottom + border-bottom + margin-bottom + top = 其父元素的高度
+            ● 上述等式的过度约束规则与《06-盒模型》中介绍的规则基本一致
+            ● 只是在没有auto时，会自动调整top/bottom/left/right 
+        */
+        .box1{
+            width: 500px;
+            height: 500px;
+            background-color: #bfa;
+            position: relative;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+
+            /* 左右外边距设置为auto */
+            /* 水平居中 */
+            /* margin-left: auto; */
+            /* margin-right: auto; */
+
+            /* 上下外边距设置为auto */
+            /* 垂直居中 */
+            /* margin-top: auto; */
+            /* margin-bottom: auto; */
+
+            /* 外边距设置为auto */
+            /* 水平垂直居中 */
+            margin: auto;
+
+            /*绝对定位  */
+            position: absolute;
+
+            /* 水平居中 */
+            /* left: 0; */
+            /* right: 0; */
+
+            /* 垂直居中 */
+            /* top: 0; */
+            /* bottom: 0; */
+
+            /* 水平垂直居中 */
+            left: 0; 
+            right: 0;
+            top: 0; 
+            bottom: 0;
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
